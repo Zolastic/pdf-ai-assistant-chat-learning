@@ -53,7 +53,7 @@ export async function processDocs(lcDocs: LCDoc[]) {
 
   // Set up a retriever to find the most similar documents
   const retriever = index.asRetriever({
-    similarityTopK: 1, // Retrieve the top 2 most similar documents
+    similarityTopK: 2, // the lower the number the more similar the results will be to the query. the higher the number the more diverse the results will be to the query.
   });
 
   // Reset the chat engine if it already exists
